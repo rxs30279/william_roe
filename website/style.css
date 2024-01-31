@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Lusitana, Arial, Helvetica;
+}
+
+/* Header section */
+.header-container {
+  width: 100%;
+  display: flex;
+  background-image: url(./images/background_fake.webp);
+  /* background-image: url(./images/william-digger.jpg); */
+  background-repeat: no-repeat;
+  background-size: fit;
+  background-position: center;
+  height: 80vh;
+}
+.navbar {
+  position: fixed;
+  display: flex;
+  z-index: 10;
+  width: 100%;
+  height: 17vh;
+  padding: 30px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  opacity: 0.8;
+}
+.navbar .logo img {
+  height: 10vh;
+  width: auto;
+}
+.navbar .title {
+  font-size: 30px;
+}
+.navbar .tel-number {
+  font-size: 27px;
+}
+.navbar ul {
+  display: flex;
+  justify-content: space-between;
+  width: 30vw;
+  list-style-type: none;
+  padding-top: 5px;
+  margin-left: 10vw;
+}
+.circle-contact {
+  height: 55vh;
+  width: 55vh;
+  background-color: hsl(93, 86%, 23%);
+  border-radius: 50%;
+  position: absolute;
+  right: 10vw;
+  bottom: 10vh;
+  text-align: center;
+}
+.text-circle {
+  color: white;
+  font-size: 5vh;
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.text-circle-box {
+  color: black;
+  font-size: 3vh;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7vh;
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 2px 2px 2px grey;
+}
+
+/* Main Section */
+
+.about-us {
+  font-size: 6vh;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  display: flex;
+  height: 30vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial;
+}
+
+.about-us-image {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-us-image img {
+  width: 45%;
+}
+
+.about-us-text h4 {
+  letter-spacing: 0.125em;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: rgb(27, 27, 27);
+  overflow-wrap: break-word;
+}
+.about-us-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  padding-top: 10vh;
+  color: #5e5e5e;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.feedback-image {
+  width: 100%;
+  display: flex;
+  background-image: url(./images/stone-feedback.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+  margin-top: 10vh;
+}
+
+.feedback-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.feedback-heading-reviews {
+  font-size: 44px;
+  color: white;
+  font-family: Arial;
+  padding: 8vh;
+}
+.feedback-subheading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  color: white;
+  gap: 5vh;
+  font: Arial;
+  margin-top: -5vh;
+}
+.feedback-subheading span {
+  font-family: Arial;
+}
+.feedback-stars-group {
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  font-size: 22px;
+}
+.feedback-stars-group img {
+  height: 20px;
+  width: 120px;
+}
+
+.carousel {
+  --current-slide: 0;
+  /* we set position relative so absolute position works properly for the buttons */
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+}
+.slides {
+  display: flex;
+  transition: transform 0.5s;
+  transform: translateX(calc(-100% * var(--current-slide)));
+}
+.slide {
+  flex: 0 0 100%;
+}
+
+.carousel-button {
+  .carousel-button {
+    /* vertically centering the buttons */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+
+    /* basic styling */
+    padding: 0;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    transition: color 0.1s;
+  }
+  .carousel-button:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  .carousel-button_next {
+    /* The "next slide button" will be at the right */
+    right: 0;
+  }
+}
+.content {
+  width: 100%;
+  margin: auto;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.feedback-box {
+  height: 60vh;
+  background-color: white;
+  margin-top: -10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+}
+.connect-with-us-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 35vh;
+  width: 100%;
+}
+.connect-with-us-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  color: black;
+  letter-spacing: 1px;
+  font: Arial;
+  padding-top: 5vh;
+}
+.connect-with-us-icons a {
+  padding: 20px;
+  text-decoration: none;
+}
+
+.footer-section-wrapper {
+  background-color: hsl(93, 86%, 23%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: 35vh;
+  width: 100%;
+}
+.footer-media-icons {
+  display: flex;
+  margin-top: 30px;
+}
+
+.footer-text {
+  color: white;
+}
+@media screen and (max-width: 741px) {
+  .navbar {
+    height: 25vh;
+    padding: 10px;
+    flex-direction: column-reverse;
+  }
+  .title {
+    display: none;
+  }
+  .navbar .logo img {
+    height: 13vh;
+    width: auto;
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .circle-contact {
+    height: 70vw;
+    width: 70vw;
+    background-color: hsl(93, 86%, 23%);
+  }
+  .text-circle {
+    font-size: 7vw;
+  }
+  .text-circle-box {
+    color: black;
+    font-size: 5vw;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7vh;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 2px grey;
+  }
+
+  .feedback-subheading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    gap: 5vh;
+    font: Arial;
+  }
+  .feedback-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+  .feedback-subheading span {
+    font-family: Arial;
+  }
+  .feedback-stars-group {
+    justify-content: center;
+    align-items: center;
+    margin-top: -5vh;
+  }
+}
