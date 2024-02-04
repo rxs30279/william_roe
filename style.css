@@ -66,7 +66,6 @@
   left: 50%;
 }
 .text-circle-box {
-  color: black;
   font-size: 3vh;
   font-weight: bold;
   display: flex;
@@ -76,6 +75,14 @@
   margin-top: 10px;
   background-color: white;
   box-shadow: 2px 2px 2px grey;
+}
+.text-circle-box a {
+  text-decoration: none;
+  position: relative;
+  color: black;
+}
+.text-circle-box a:active {
+  top: 2px;
 }
 
 /* Main Section */
